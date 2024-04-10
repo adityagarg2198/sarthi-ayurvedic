@@ -123,13 +123,13 @@ const Header = () => {
               fontFamily: 'monospace',
               fontWeight: 700,
               color: main,
-              fontSize: '2.4rem',
+              fontSize: '1.8rem',
               letterSpacing: '.3rem',
               textDecoration: 'none',
             }}>
             <LocalHospital
               sx={{
-                fontSize: '5rem',
+                fontSize: '4rem',
                 color: main,
               }}
             />
