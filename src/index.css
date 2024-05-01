@@ -1,10 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --primary-color: #f5fafd;
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-size: 62.5%;
   box-sizing: border-box;
 }
 
-html,
-body {
-  font-size: 62.5%;
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  border: 0.7rem solid #312e81;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  transform-origin: 0 50%;
+  animation: progressAnime auto linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes progressAnime {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }

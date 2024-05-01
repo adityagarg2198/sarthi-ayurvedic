@@ -1,0 +1,53 @@
+.hero-section {
+  position: relative;
+}
+
+.hero-section-image {
+  background-image: url('../../assets/images/hero-image.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+}
+
+@keyframes modalAnime {
+  0% {
+    transform: scale(0);
+    transform: translate(-50%, -50%);
+    top: 100vh;
+    left: 50%;
+  }
+  100% {
+    transform: scale(1);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 20vh;
+  }
+}
+
+.signup-modal {
+  width: 30rem;
+  height: 40rem;
+  position: absolute;
+  z-index: 2000;
+  background: rgba(165, 180, 252, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 50px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(165, 180, 252, 1);
+  color: white;
+  animation-name: modalAnime;
+  animation-duration: 900ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.31, 0.58, 0.08, 0.72);
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero-section-image {
+    height: 50rem;
+  }
+  .signup-modal {
+    width: 40rem;
+    height: 40rem;
+  }
+}
