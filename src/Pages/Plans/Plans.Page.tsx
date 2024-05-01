@@ -9,44 +9,29 @@ const Plans = () => {
       className='plans-section flex justify-center items-center flex-col px-10 md:px-20 py-24 w-full gap-20 md:gap-40'>
       <Slide duration={1500} direction='right'>
         <h2 className='text-5xl md:text-7xl text-white font-semibold'>
-          Choose your plan
+          Our Doctor's Panel
         </h2>
       </Slide>
       <section className='flex gap-28 flex-wrap justify-center'>
         <PlansCard
-          title='Free'
+          title='PROFESSOR(DR.) SANJEET SINGH RANA'
           features={[
-            'Unlimited Text Notes',
-            'Basic Formatting',
-            'Tagging System',
-            'Starred Notes',
-            'Cloud Storage upto 50MB',
+            'REG. NO.22924',
+            'TIMING. Morning 7 TO 9 AM',
+            'TIMING. Evening 4 TO 10 PM',
           ]}
-          price='0'
+          price='BAMS, MD(PANCHKARMA)
+          PGCCH, PHD PERCIEVING'
         />
         <PlansCard
-          title='Basic'
-          features={[
-            'Sync Across Devices',
-            'Robust Search',
-            'Reminders and Notifications',
-            'Offline Access',
-            'Customer Support',
-            'Cloud Storage upto 500MB',
-          ]}
-          price='10/month'
+          title='DR. RAHUL RANA'
+          features={['REG.NO. 288884', 'TIMING 9 AM TO 5 PM']}
+          price='BAMS'
         />
         <PlansCard
-          title='Premium'
-          features={[
-            'Export and Backup',
-            'Real-Time Collaboration',
-            'Priority Customer Support',
-            'AI-Powered Features',
-            'Advanced Integrations',
-            'Cloud Storage upto 10GB',
-          ]}
-          price='99/month'
+          title='DR. SUBHAM'
+          features={['REG.NO. –', 'RMO']}
+          price='BAMS'
         />
       </section>
       <section className='flex flex-col gap-5 mt-10 items-center'>
