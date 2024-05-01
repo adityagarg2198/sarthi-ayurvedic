@@ -1,12 +1,13 @@
 import { Slide } from 'react-awesome-reveal';
 import FeatureCard from '../../components/FeatureCard/FeatureCard.component';
+import './Features.css'
 
 const Features = () => {
   return (
     <section
       role='region'
       aria-label='Features'
-      className='flex justify-center bg-emerald-500 items-center flex-col px-10 md:px-20 py-16 w-full gap-14 md:gap-24'>
+      className='flex justify-center features bg-emerald-500 items-center flex-col px-10 md:px-20 py-16 w-full gap-14 md:gap-24'>
       <Slide direction='up'>
         <h2 className='text-5xl text-center md:text-7xl text-white font-semibold'>
           Everything You Need in One Place
