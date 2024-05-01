@@ -2,7 +2,7 @@ import logo from '../../assets/images/logo.jpeg';
 
 const Header = () => {
   return (
-    <header className='h-52 py-8 px-20 flex justify-center sm:justify-start'>
+    <header className='py-4 px-20 flex justify-center sm:justify-start'>
       <section className='flex items-center cursor-pointer gap-2'>
         <figure className='rounded-full max-w-36 bg-white'>
           <img src={logo} alt='' />

@@ -6,9 +6,9 @@ const Features = () => {
     <section
       role='region'
       aria-label='Features'
-      className='flex justify-center items-center flex-col px-10 md:px-20 mt-32 md:mt-24 w-full gap-14 md:gap-24'>
+      className='flex justify-center bg-emerald-500 items-center flex-col px-10 md:px-20 py-16 w-full gap-14 md:gap-24'>
       <Slide direction='up'>
-        <h2 className='text-5xl text-center md:text-7xl text-emerald-900 font-semibold'>
+        <h2 className='text-5xl text-center md:text-7xl text-white font-semibold'>
           Everything You Need in One Place
         </h2>
       </Slide>
