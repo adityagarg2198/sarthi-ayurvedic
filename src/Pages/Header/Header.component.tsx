@@ -7,8 +7,8 @@ const Header = () => {
         <figure className='rounded-full max-w-36 bg-white'>
           <img src={logo} alt='' />
         </figure>
-        <p className='text-4xl sm:text-6xl italic text-emerald-500 font-bold'>
-          Sarthi Ayurvedic Hospital
+        <p className='text-4xl sm:text-5xl italic text-emerald-500 font-bold'>
+          Sarthi Ayurvedic & Panchkarma Hospital
         </p>
       </section>
     </header>
