@@ -52,8 +52,12 @@ const Features = () => {
             'Swaranprashan',
             'Immunity boost',
             'Dry/wet cough',
-            'Height inresing facts',
-            'GASTRO-',
+            'Height increasing facts',
+          ]}
+          heading='PEDIATRIC:'
+        />
+        <FeatureCard
+          body={[
             'Psoriasis',
             'Eczema',
             'Scabies',
@@ -62,7 +66,7 @@ const Features = () => {
             'Hyperpigmentation',
             'Acne vulgaris',
           ]}
-          heading='PAEDIATRIC:'
+          heading='SKIN CARE:'
         />
         <FeatureCard
           body={[
@@ -72,7 +76,7 @@ const Features = () => {
             'Cervical pain',
             'Sciatica',
             'Disc problem',
-            'Frozen shouldher',
+            'Frozen shoulder',
             'Avs',
             'Ligament tear',
           ]}
@@ -86,14 +90,18 @@ const Features = () => {
             'Ibs',
             'Liver disorder',
             'Hiatus hernia',
-            'RESPICARE-',
-            'Asthama',
+          ]}
+          heading='GASTRO CARE:'
+        />
+        <FeatureCard
+          body={[
+            'Asthma',
             'Sinusitis',
             'Bronchitis',
             'Allergic rhinitis',
             'Pneumonitis',
           ]}
-          heading='GASTRO CARE:'
+          heading='RESPICARE:'
         />
         <FeatureCard
           body={[
