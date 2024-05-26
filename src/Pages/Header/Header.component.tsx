@@ -5,7 +5,7 @@ import logo2 from '../../assets/images/nabh.png';
 const Header = () => {
   const navigate = useNavigate();
   const handleDrClick = () => {
-    navigate('/drsanjeetrana');
+    navigate('/doctor');
   };
 
   const handleLogoClick = () => {

@@ -25,7 +25,7 @@ const App = () => {
             </div>
           }
         />
-        <Route path='/drsanjeetrana' element={<DrSanjeetRana />} />
+        <Route path='/doctor' element={<DrSanjeetRana />} />
       </Routes>
       <Footer />
     </div>
