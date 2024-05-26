@@ -50,7 +50,7 @@ const HeroSection = () => {
   };
 
   return (
-    <main className='hero-section flex px-10 h-fit md:px-20 justify-between w-full mt-10'>
+    <main className='hero-section flex px-10 md:px-20 justify-between w-full mt-10'>
       <section className='flex flex-col justify-start lg:justify-center gap-10'>
         <h1 className='text-5xl mt-8 lg:mt-0  lg:text-7xl text-emerald-500 font-bold drop-shadow-md'>
           Discover the Healing Power of Ayurveda & Panchkarma at Sarthi
@@ -124,46 +124,48 @@ const HeroSection = () => {
           </div>
         ) : null}
       </section>
-      <Swiper
-        direction={'vertical'}
-        autoplay={{
-          delay: 1500,
-        }}
-        effect='fade'
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination, Autoplay]}
-        className='mySwiper'>
-        <SwiperSlide>
-          {' '}
-          <img src={Slide1} alt='' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={Slide2} alt='' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={Slide3} alt='' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={Slide4} alt='' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={Slide5} alt='' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={Slide6} alt='' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={Slide7} alt='' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={Slide8} alt='' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={Slide9} alt='' />
-        </SwiperSlide>
-      </Swiper>
+      <section className='hidden md:block'>
+        <Swiper
+          direction={'vertical'}
+          autoplay={{
+            delay: 1500,
+          }}
+          effect='fade'
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination, Autoplay]}
+          className='mySwiper'>
+          <SwiperSlide>
+            {' '}
+            <img src={Slide1} alt='' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Slide2} alt='' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Slide3} alt='' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Slide4} alt='' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Slide5} alt='' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Slide6} alt='' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Slide7} alt='' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Slide8} alt='' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Slide9} alt='' />
+          </SwiperSlide>
+        </Swiper>
+      </section>
       <Snackbar
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         sx={{
@@ -179,7 +181,7 @@ const HeroSection = () => {
           severity='success'
           variant='filled'
           sx={{
-            color:'white',
+            color: 'white',
             fontSize: '2rem',
             padding: '0.5rem 1rem',
           }}>
