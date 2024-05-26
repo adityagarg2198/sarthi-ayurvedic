@@ -28,6 +28,21 @@
   animation-timeline: scroll(root);
 }
 
+.dr-image-wrapper {
+  flex: 2;
+}
+
+.dr-image {
+  width: 40rem;
+  height: 40rem;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.dr-content {
+  flex: 3;
+}
+
 @keyframes progressAnime {
   0% {
     transform: scaleX(0);

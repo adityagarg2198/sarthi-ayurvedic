@@ -1,5 +1,5 @@
-import { AttentionSeeker, Slide } from 'react-awesome-reveal';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import emailjs from '@emailjs/browser';
 import Slide1 from '../../assets/images/WhatsApp Image 2024-04-28 at 12.17.17.jpeg';
 import Slide2 from '../../assets/images/WhatsApp Image 2024-04-28 at 12.17.20.jpeg';
 import Slide3 from '../../assets/images/WhatsApp Image 2024-04-28 at 12.17.21.jpeg';
@@ -15,37 +15,61 @@ import { useState } from 'react';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Alert, Snackbar } from '@mui/material';
 
 const HeroSection = () => {
   const [showModal, setShowModal] = useState(false);
+  const [message, setMessage] = useState('');
+  const [alert, setAlert] = useState(false);
+  const [name, setName] = useState('');
+  const [mobile, setMobile] = useState('');
   const handleClick = () => {
     setShowModal(true);
+  };
+
+  const handleButtonClick = async () => {
+    try {
+      const res = await emailjs.send(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        {
+          from_name: name,
+          mobile: mobile,
+          to_name: 'Sarthi Ayurvedic',
+          message: message,
+        },
+        { publicKey: import.meta.env.VITE_PUBLIC_KEY }
+      );
+      if (res.status === 200) {
+        setAlert(true);
+        setShowModal(false);
+      }
+    } catch {
+      //
+    }
   };
 
   return (
     <main className='hero-section flex px-10 h-fit md:px-20 justify-between w-full mt-10'>
       <section className='flex flex-col justify-start lg:justify-center gap-10'>
-        <Slide delay={100}>
-          <h1 className='text-5xl mt-8 lg:mt-0  lg:text-7xl text-emerald-500 font-bold drop-shadow-md'>
-            Discover the Healing Power of Ayurveda & Panchkarma at Sarthi Ayurvedic
-          </h1>
-        </Slide>
-        <AttentionSeeker effect='rubberBand' duration={2000}>
-          <button
-            className='text-2xl md:text-4xl w-fit px-8 py-4 rounded-2xl bg-emerald-500 font-bold text-white hover:scale-105 transition ease-in-out delay-0'
-            onClick={handleClick}>
-            Book Appointment
-          </button>
-        </AttentionSeeker>
+        <h1 className='text-5xl mt-8 lg:mt-0  lg:text-7xl text-emerald-500 font-bold drop-shadow-md'>
+          Discover the Healing Power of Ayurveda & Panchkarma at Sarthi
+          Ayurvedic
+        </h1>
+        <button
+          className='text-2xl md:text-4xl w-fit px-8 py-4 rounded-2xl bg-emerald-500 font-bold text-white hover:scale-105 transition ease-in-out delay-0'
+          onClick={handleClick}>
+          Book Appointment
+        </button>
         {showModal ? (
           <div className='signup-modal flex flex-col p-10 gap-8'>
             <div className='flex'>
               <h3 className='text-lg md:text-3xl text-white px-5 py-3 w-fit bg-emerald-500 rounded-3xl font-extrabold my-0 mx-auto'>
-                Sign Up Now !
+                Book Appointment
               </h3>
               <button onClick={() => setShowModal(false)}>
                 <svg
-                  className='fill-indigo-500'
+                  className='fill-emerald-500'
                   height='20'
                   width='20'
                   version='1.1'
@@ -64,40 +88,38 @@ const HeroSection = () => {
               <input
                 type='text'
                 name='name'
-                className='w-full h-16 px-6 py-2 text-emerald-900 text-3xl border-2 border-indigo-500 rounded-2xl outline-none'
+                value={name}
+                onChange={({ currentTarget: { value } }) => setName(value)}
+                className='w-full h-16 px-6 py-2 text-emerald-900 text-2xl border-2 border-emerald-500 rounded-2xl outline-none'
                 id='name'
                 placeholder='Enter Name'
               />
             </label>
-            <label htmlFor='email'>
+            <label htmlFor='number'>
               <input
-                type='email'
-                name='email'
-                id='name'
-                className='w-full h-16 px-6 py-2 text-emerald-900 text-3xl border-2 border-indigo-500 rounded-2xl outline-none'
-                placeholder='Enter Email'
+                type='text'
+                name='number'
+                onChange={({ currentTarget: { value } }) => setMobile(value)}
+                value={mobile}
+                className='w-full h-16 px-6 py-2 text-emerald-900 text-2xl border-2 border-emerald-500 rounded-2xl outline-none'
+                placeholder='Enter Mobile Number'
               />
             </label>
-            <label htmlFor='password'>
-              <input
-                type='password'
-                name='password'
-                id='name'
-                className='w-full h-16 px-6 py-2 text-emerald-900 text-3xl border-2 border-indigo-500 rounded-2xl outline-none'
-                placeholder='Enter Password'
+            <label htmlFor='complaint'>
+              <textarea
+                name='complaint'
+                id='complaint'
+                value={message}
+                rows={4}
+                onChange={({ currentTarget: { value } }) => setMessage(value)}
+                className='w-full px-6 py-2 text-emerald-900 text-2xl border-2 border-emerald-500 rounded-2xl outline-none'
+                placeholder='Describe your problem here'
               />
             </label>
-            <label htmlFor='cpassword'>
-              <input
-                type='password'
-                name='cpassword'
-                id='name'
-                className='w-full h-16 px-6 py-2 text-emerald-900 text-3xl border-2 border-indigo-500 rounded-2xl outline-none'
-                placeholder='Confirm Password'
-              />
-            </label>
-            <button className='text-xl w-fit px-8 py-4 rounded-2xl bg-emerald-500 font-bold text-white hover:scale-105 transition ease-in-out delay-0'>
-              Let's Go
+            <button
+              className='text-xl w-fit px-8 py-4 rounded-2xl bg-emerald-500 font-bold text-white hover:scale-105 transition ease-in-out delay-0'
+              onClick={handleButtonClick}>
+              Book Now
             </button>
           </div>
         ) : null}
@@ -142,6 +164,28 @@ const HeroSection = () => {
           <img src={Slide9} alt='' />
         </SwiperSlide>
       </Swiper>
+      <Snackbar
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        sx={{
+          left: '50% !important',
+          '& div': {
+            background: '#047857',
+          },
+        }}
+        open={alert}
+        autoHideDuration={4000}
+        onClose={() => setAlert(false)}>
+        <Alert
+          severity='success'
+          variant='filled'
+          sx={{
+            color:'white',
+            fontSize: '2rem',
+            padding: '0.5rem 1rem',
+          }}>
+          Appointment Booked Successfully
+        </Alert>
+      </Snackbar>
     </main>
   );
 };
