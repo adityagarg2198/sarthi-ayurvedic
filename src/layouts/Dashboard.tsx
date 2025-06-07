@@ -3,7 +3,7 @@ import { DashboardLayout } from "@toolpad/core/DashboardLayout";
 
 export default function Dashboard() {
   return (
-    <DashboardLayout>
+    <DashboardLayout defaultSidebarCollapsed>
       <Outlet />
     </DashboardLayout>
   );
