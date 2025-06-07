@@ -1,53 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --primary-color: #f5fafd;
-}
-
-* {
-  margin: 0;
-  padding: 0;
+html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
 
-.progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10000;
-  border: 0.7rem solid #047857;
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  transform-origin: 0 50%;
-  animation: progressAnime auto linear;
-  animation-timeline: scroll(root);
+#root > nav {
+  padding-top: "10rem";
 }
 
-.dr-image-wrapper {
-  flex: 2;
-}
-
-.dr-image {
-  width: 40rem;
-  height: 40rem;
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-.dr-content {
-  flex: 3;
-}
-
-@keyframes progressAnime {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
+header img {
+  max-height: 8rem !important;
 }

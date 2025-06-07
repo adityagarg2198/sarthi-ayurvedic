@@ -1,35 +1,57 @@
-import Home from './Pages/Home/Home.page';
-import Header from './Pages/Header';
-import { Route, Routes } from 'react-router-dom';
-import DrSanjeetRana from './Pages/DrSanjeetRana/DrSanjeetRana.component';
-import Features from './Pages/Features';
-import Reviews from './Pages/Reviews';
-import Plans from './Pages/Plans';
-import Footer from './Pages/Footer';
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import { ReactRouterAppProvider } from "@toolpad/core/react-router";
+import { Outlet } from "react-router";
+import type { Branding, Navigation } from "@toolpad/core";
 
-const App = () => {
-  return (
-    <div className='md:container md:mx-auto '>
-      <div className='progress'></div>
-      <Header />
-      <Routes>
-        <Route
-          path='/'
-          index
-          element={
-            <div className='flex flex-col'>
-              <Home />
-              <Features />
-              <Reviews />
-              <Plans />
-            </div>
-          }
-        />
-        <Route path='/doctor' element={<DrSanjeetRana />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+import Logo from "./assets/images/logo.jpeg";
+import {
+  ContactPage,
+  Diversity1,
+  Info,
+  MedicalServices,
+} from "@mui/icons-material";
+import hospitalTheme from "./theme";
+
+const NAVIGATION: Navigation = [
+  {
+    title: "Home",
+    icon: <DashboardIcon />,
+  },
+  {
+    segment: "about",
+    title: "About",
+    icon: <Info />,
+  },
+  {
+    segment: "services",
+    title: "Services",
+    icon: <MedicalServices />,
+  },
+  {
+    segment: "doctors",
+    title: "Doctors",
+    icon: <Diversity1 />,
+  },
+  {
+    segment: "contact",
+    title: "Contact",
+    icon: <ContactPage />,
+  },
+];
+
+const BRANDING: Branding = {
+  title: "Sarthi Ayurvedic Hospital",
+  logo: <img src={Logo} alt="Sarthi Ayurvedic Hospital Logo" />,
 };
 
-export default App;
+export default function App() {
+  return (
+    <ReactRouterAppProvider
+      navigation={NAVIGATION}
+      branding={BRANDING}
+      theme={hospitalTheme}
+    >
+      <Outlet />
+    </ReactRouterAppProvider>
+  );
+}
