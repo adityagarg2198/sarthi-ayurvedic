@@ -26,6 +26,7 @@ import JpIcon from "../../components/CustomIcons/JointPain";
 import KidneyIcon from "../../components/CustomIcons/Kidney";
 import DoctorsIcon from "../../components/CustomIcons/Doctors";
 import DrSanjeetRana from "../../assets/images/drrana.jpeg";
+import SectionTemplate from "../../components/SectionTemplate/SectionTemplate.component";
 
 const CustomBox: FC<{ text1: string; text2: string; icon: ReactNode }> = ({
   text1,
@@ -446,299 +447,258 @@ const Home = () => {
           </Paper>
         </Stack>
       </Stack>
-      <Stack
-        gap={"4rem"}
-        bgcolor={"#fdfdfd"}
-        p={"15rem 5rem 5rem"}
-        justifyContent={"flex-start"}
-        alignItems={"center"}
-        position={"relative"}
-        flexWrap={"wrap"}
-        width={"100%"}
-      >
-        <Stack
-          flex={1}
-          gap={"1rem"}
-          alignItems={"center"}
+      <SectionTemplate heading=" Diseases We Treat" subHeading="Treatment">
+        <Paper
           sx={{
-            ".MuiSvgIcon-root": {
-              color: "#5DADE2 !important",
-              fontSize: "8rem",
-            },
+            p: "1rem",
+            flex: "0 0 22%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
-          <SpaOutlined />
-          <Typography variant="h2" textTransform={"capitalize"}>
-            Diseases We Treat
+          <DiabetesIcon
+            sx={{
+              fontSize: "10rem",
+            }}
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            Diabetes
           </Typography>
-          <Typography variant="h4" textTransform={"capitalize"}>
-            Treatment
-          </Typography>
-        </Stack>
-        <Stack
-          flexDirection={"row"}
-          justifyContent={"space-between"}
-          width={"100%"}
-          flexWrap={"wrap"}
-          gap={"3rem"}
+        </Paper>
+        <Paper
           sx={{
-            ".MuiSvgIcon-root": {
-              fill: "#5DADE2 !important",
-            },
+            p: 1,
+            flex: "0 0 22%",
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
-          <Paper
+          <InfertileIcon
             sx={{
-              p: "1rem",
-              flex: "0 0 22%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "6rem",
+              mt: "1.5rem",
             }}
-          >
-            <DiabetesIcon
-              sx={{
-                fontSize: "10rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              Diabetes
-            </Typography>
-          </Paper>
-          <Paper
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            Infertility
+          </Typography>
+        </Paper>
+        <Paper
+          sx={{
+            p: 1,
+            flex: "0 0 22%",
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <BpIcon
             sx={{
-              p: 1,
-              flex: "0 0 22%",
-              display: "flex",
-              gap: "2rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "6rem",
+              mt: "1.5rem",
             }}
-          >
-            <InfertileIcon
-              sx={{
-                fontSize: "6rem",
-                mt: "1.5rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              Infertility
-            </Typography>
-          </Paper>
-          <Paper
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            Blood Pressure
+          </Typography>
+        </Paper>
+        <Paper
+          sx={{
+            p: 1,
+            flex: "0 0 22%",
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <CancerIcon
             sx={{
-              p: 1,
-              flex: "0 0 22%",
-              display: "flex",
-              gap: "2rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "6rem",
+              mt: "1.5rem",
             }}
-          >
-            <BpIcon
-              sx={{
-                fontSize: "6rem",
-                mt: "1.5rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              Blood Pressure
-            </Typography>
-          </Paper>
-          <Paper
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            Cancer
+          </Typography>
+        </Paper>
+        <Paper
+          sx={{
+            p: 1,
+            flex: "0 0 22%",
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <MigraineIcon
             sx={{
-              p: 1,
-              flex: "0 0 22%",
-              display: "flex",
-              gap: "2rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "6rem",
+              mt: "1.5rem",
             }}
-          >
-            <CancerIcon
-              sx={{
-                fontSize: "6rem",
-                mt: "1.5rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              Cancer
-            </Typography>
-          </Paper>
-          <Paper
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            Migraine
+          </Typography>
+        </Paper>
+        <Paper
+          sx={{
+            p: 1,
+            flex: "0 0 22%",
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Epilepsy
             sx={{
-              p: 1,
-              flex: "0 0 22%",
-              display: "flex",
-              gap: "2rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "6rem",
+              mt: "1.5rem",
             }}
-          >
-            <MigraineIcon
-              sx={{
-                fontSize: "6rem",
-                mt: "1.5rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              Migraine
-            </Typography>
-          </Paper>
-          <Paper
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            Epilepsy
+          </Typography>
+        </Paper>
+        <Paper
+          sx={{
+            p: 1,
+            flex: "0 0 22%",
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <IBSIcon
             sx={{
-              p: 1,
-              flex: "0 0 22%",
-              display: "flex",
-              gap: "2rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "6rem",
+              mt: "1.5rem",
             }}
-          >
-            <Epilepsy
-              sx={{
-                fontSize: "6rem",
-                mt: "1.5rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              Epilepsy
-            </Typography>
-          </Paper>
-          <Paper
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            IBS
+          </Typography>
+        </Paper>
+        <Paper
+          sx={{
+            p: 1,
+            flex: "0 0 22%",
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <ThyroidIcon
             sx={{
-              p: 1,
-              flex: "0 0 22%",
-              display: "flex",
-              gap: "2rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "6rem",
+              mt: "1.5rem",
             }}
-          >
-            <IBSIcon
-              sx={{
-                fontSize: "6rem",
-                mt: "1.5rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              IBS
-            </Typography>
-          </Paper>
-          <Paper
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            Thyroid
+          </Typography>
+        </Paper>
+        <Paper
+          sx={{
+            p: 1,
+            flex: "0 0 22%",
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <PCODIcon
             sx={{
-              p: 1,
-              flex: "0 0 22%",
-              display: "flex",
-              gap: "2rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "6rem",
+              mt: "1.5rem",
             }}
-          >
-            <ThyroidIcon
-              sx={{
-                fontSize: "6rem",
-                mt: "1.5rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              Thyroid
-            </Typography>
-          </Paper>
-          <Paper
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            PCOD/PCOS
+          </Typography>
+        </Paper>
+        <Paper
+          sx={{
+            p: 1,
+            flex: "0 0 22%",
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <LiverIcon
             sx={{
-              p: 1,
-              flex: "0 0 22%",
-              display: "flex",
-              gap: "2rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "6rem",
+              mt: "1.5rem",
             }}
-          >
-            <PCODIcon
-              sx={{
-                fontSize: "6rem",
-                mt: "1.5rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              PCOD/PCOS
-            </Typography>
-          </Paper>
-          <Paper
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            Liver
+          </Typography>
+        </Paper>
+        <Paper
+          sx={{
+            p: 1,
+            flex: "0 0 22%",
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <JpIcon
             sx={{
-              p: 1,
-              flex: "0 0 22%",
-              display: "flex",
-              gap: "2rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "6rem",
+              mt: "1.5rem",
             }}
-          >
-            <LiverIcon
-              sx={{
-                fontSize: "6rem",
-                mt: "1.5rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              Liver
-            </Typography>
-          </Paper>
-          <Paper
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            Joint Pain
+          </Typography>
+        </Paper>
+        <Paper
+          sx={{
+            p: 1,
+            flex: "0 0 22%",
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <KidneyIcon
             sx={{
-              p: 1,
-              flex: "0 0 22%",
-              display: "flex",
-              gap: "2rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "6rem",
+              mt: "1.5rem",
             }}
-          >
-            <JpIcon
-              sx={{
-                fontSize: "6rem",
-                mt: "1.5rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              Joint Pain
-            </Typography>
-          </Paper>
-          <Paper
-            sx={{
-              p: 1,
-              flex: "0 0 22%",
-              display: "flex",
-              gap: "2rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <KidneyIcon
-              sx={{
-                fontSize: "6rem",
-                mt: "1.5rem",
-              }}
-            />
-            <Typography variant="h4" textAlign={"center"}>
-              Kidney
-            </Typography>
-          </Paper>
-        </Stack>
-      </Stack>
+          />
+          <Typography variant="h4" textAlign={"center"}>
+            Kidney
+          </Typography>
+        </Paper>
+      </SectionTemplate>
       <Stack
         bgcolor={"#D6EAF8"}
         gap={"5rem"}

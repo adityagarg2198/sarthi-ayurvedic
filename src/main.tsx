@@ -7,6 +7,7 @@ import Home from "./Pages/Home/Home.page";
 import { CssBaseline } from "@mui/material";
 
 import "./index.css";
+import About from "./Pages/About/About.page";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
           },
           {
             path: "about",
-            Component: () => <div>About Us</div>,
+            Component: () => <About />,
           },
           {
             path: "services",
