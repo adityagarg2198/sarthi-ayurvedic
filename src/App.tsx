@@ -1,57 +1,35 @@
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import { ReactRouterAppProvider } from "@toolpad/core/react-router";
-import { Outlet } from "react-router";
-import type { Branding, Navigation } from "@toolpad/core";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-import Logo from "./assets/images/logo.jpeg";
-import {
-  ContactPage,
-  Diversity1,
-  Info,
-  MedicalServices,
-} from "@mui/icons-material";
-import hospitalTheme from "./theme";
+function App() {
+  const [count, setCount] = useState(0)
 
-const NAVIGATION: Navigation = [
-  {
-    title: "Home",
-    icon: <DashboardIcon />,
-  },
-  {
-    segment: "about",
-    title: "About",
-    icon: <Info />,
-  },
-  {
-    segment: "services",
-    title: "Services",
-    icon: <MedicalServices />,
-  },
-  {
-    segment: "doctors",
-    title: "Doctors",
-    icon: <Diversity1 />,
-  },
-  {
-    segment: "contact",
-    title: "Contact",
-    icon: <ContactPage />,
-  },
-];
-
-const BRANDING: Branding = {
-  title: "Sarthi Ayurvedic Hospital",
-  logo: <img src={Logo} alt="Sarthi Ayurvedic Hospital Logo" />,
-};
-
-export default function App() {
   return (
-    <ReactRouterAppProvider
-      navigation={NAVIGATION}
-      branding={BRANDING}
-      theme={hospitalTheme}
-    >
-      <Outlet />
-    </ReactRouterAppProvider>
-  );
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
+
+export default App
