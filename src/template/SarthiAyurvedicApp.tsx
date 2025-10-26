@@ -1,13 +1,15 @@
-import Header from '@/atoms/Header'
-import Home from '@/pages/Home'
+import Footer from "@/atoms/Footer";
+import Header from "@/atoms/Header";
+import Home from "@/pages/Home";
 
 const SarthiAyurvedicApp = () => {
   return (
     <>
-    <Header />
-    <Home/>
+      <Header />
+      <Home />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default SarthiAyurvedicApp
+export default SarthiAyurvedicApp;

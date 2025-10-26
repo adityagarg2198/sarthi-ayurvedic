@@ -1,11 +1,12 @@
 import nabh from "@/assets/images/nabh.png";
+import Stat from "@/atoms/Stat";
 
 const Home = () => {
   return (
-    <main className="w-full h-dvh">
+    <main className="w-full h-full">
       <section className="bg-sarthi-green w-full flex items-center flex-col py-10 text-neutral-900 gap-10">
         <h1 className="text-sm">YOUR JOURNEY TO WELLNESS BEGINS HERE</h1>
-        <p className="text-4xl font-semibold text-center w-[400px]">
+        <p className="text-4xl font-semibold text-center w-96">
           Trusted Ayurvedic care for a healthier & happier life.
         </p>
         <div className="flex items-center gap-5">
@@ -18,6 +19,11 @@ const Home = () => {
           </figure>
           <p className="text-4xl font-bold"> NABH ACCREDITED</p>
         </div>
+      </section>
+      <section className="w-full flex items-center py-15">
+        <Stat count="500" heading="Patients Treated" />
+        <Stat count="10" heading="Specialized Treatments" />
+        <Stat count="3" heading="Expert Doctors" />
       </section>
     </main>
   );

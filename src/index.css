@@ -11,6 +11,7 @@
 
 @theme {
   --color-sarthi-green: #9bc53d;
+  --container-xl: 90rem;
 }
 
 body {
