@@ -6,7 +6,7 @@ const Home = () => {
     <main className="w-full h-full">
       <section className="bg-sarthi-green w-full flex items-center flex-col py-10 text-neutral-900 gap-10">
         <h1 className="text-sm">YOUR JOURNEY TO WELLNESS BEGINS HERE</h1>
-        <p className="text-4xl font-semibold text-center w-96">
+        <p className="text-4xl font-semibold text-center max-w-96">
           Trusted Ayurvedic care for a healthier & happier life.
         </p>
         <div className="flex items-center gap-5">
