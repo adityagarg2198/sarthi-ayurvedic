@@ -5,7 +5,7 @@ const fastify = Fastify({
 });
 const port = Number(process.env.PORT) || 3000;
 
-fastify.get("/", async (_request, reply) => {
+fastify.get("/hello", async (_request, reply) => {
   reply.send({ hello: "world" });
 });
 
