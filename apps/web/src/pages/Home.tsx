@@ -1,4 +1,5 @@
 import nabh from "@/assets/images/nabh.png";
+import Marquee from "@/atoms/Marquee";
 import Stat from "@/atoms/Stat";
 
 const Home = () => {
@@ -25,6 +26,13 @@ const Home = () => {
         <Stat count="10" heading="Specialized Treatments" />
         <Stat count="3" heading="Expert Doctors" />
       </section>
+      <Marquee
+        content={[
+          "ALL MAJOR HEALTH INSURANCES",
+          "PANELS PROVIDED  -  ESI,  CGHS,  AYUSHMAN BHARAT,  GOVERNMENT EMPLOYEES",
+          "NABH ACCREDITED",
+        ]}
+      />
     </main>
   );
 };
