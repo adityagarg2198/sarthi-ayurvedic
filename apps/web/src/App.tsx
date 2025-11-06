@@ -6,7 +6,7 @@ const App = () => {
     const API_BASE = import.meta.env.VITE_API_BASE || "";
     console.log("base api", API_BASE);
     (async () => {
-      const res = await fetch(`${API_BASE}/hello`);
+      const res = await fetch(`${API_BASE}/getDoctors`);
       const output = await res.json();
       console.log(output);
     })();
