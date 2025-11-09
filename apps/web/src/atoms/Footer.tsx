@@ -17,7 +17,7 @@ const FooterItem: FC<{ heading: string; children: ReactNode }> = ({
 
 const Footer = () => {
   return (
-    <footer className="text-neutral-900 w-full flex p-5 sm:p-10 max-w-xl flex-col mx-auto gap-10">
+    <footer className="text-neutral-900 w-full flex p-5 mt-10 sm:p-10 max-w-xl flex-col mx-auto gap-10">
       <section className="flex gap-10 sm:gap-20 md:gap-30 flex-wrap mx-auto">
         <section className="flex flex-col max-w-96 min-w-40 gap-4">
           <FooterItem heading="Address">
