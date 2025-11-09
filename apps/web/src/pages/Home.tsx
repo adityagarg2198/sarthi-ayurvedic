@@ -4,7 +4,7 @@ import Stat from "@/atoms/Stat";
 
 const Home = () => {
   return (
-    <main className="w-full h-full">
+    <section className="w-full h-full">
       <section className="bg-sarthi-green w-full flex items-center flex-col py-10 text-neutral-900 gap-10">
         <h1 className="text-sm">YOUR JOURNEY TO WELLNESS BEGINS HERE</h1>
         <p className="text-4xl font-semibold text-center max-w-96">
@@ -33,7 +33,7 @@ const Home = () => {
           "NABH ACCREDITED",
         ]}
       />
-    </main>
+    </section>
   );
 };
 

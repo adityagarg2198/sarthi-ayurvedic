@@ -10,12 +10,14 @@ const SarthiAyurvedicApp = () => {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/doctors" element={<Doctors />} />
-        <Route path="/contacts" element={<Contact />} />
-      </Routes>
+      <main className="w-full h-full pt-28">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/doctors" element={<Doctors />} />
+          <Route path="/contacts" element={<Contact />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   );

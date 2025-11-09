@@ -15,7 +15,7 @@ import { ChevronRightIcon } from "lucide-react";
 
 const Header = () => {
   return (
-    <NavigationMenu className="px-3 py-4">
+    <NavigationMenu className="px-8 py-4 w-full fixed bg-white shadow-md shadow-black/20">
       <Logo />
       <NavigationMenuList className="flex-wrap">
         <NavigationMenuItem>
