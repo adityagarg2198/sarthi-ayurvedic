@@ -9,7 +9,7 @@ const TreatmentSection: FC<{
   const generateListItems = () => {
     return Object.entries(listObj).map(([key, value]) => {
       return (
-        <li key={key} className="text-xl">
+        <li key={key}>
           👉 <span className="text-sarthi-green">{key} - </span>
           {value}
         </li>
@@ -18,30 +18,28 @@ const TreatmentSection: FC<{
   };
 
   return (
-    <section className="mt-10 mx-auto">
-      <Card className="flex flex-col gap-5 p-10">
-        <h2 className="text-5xl text-sarthi-text-secondary text-center">
-          {heading[0]} <span className="text-sarthi-green">{heading[1]}</span>
-        </h2>
-        {subHeading && <p className="text-2xl text-center">{subHeading}</p>}
-        <ul className="flex flex-col gap-1">{generateListItems()}</ul>
-      </Card>
-    </section>
+    <Card className="flex flex-col w-full max-w-3xl gap-5 p-2">
+      <h2 className="text-sarthi-text-secondary text-center">
+        {heading[0]} <span className="text-sarthi-green">{heading[1]}</span>
+      </h2>
+      {subHeading && <h3 className="text-center">{subHeading}</h3>}
+      <ul className="flex flex-col gap-2">{generateListItems()}</ul>
+    </Card>
   );
 };
 
 const Treatments = () => {
   return (
-    <section className="w-full h-full text-neutral-600 p-10 flex flex-col gap-10">
-      <h1 className="text-5xl text-sarthi-text-secondary text-center mt-10">
+    <section className="w-full h-full text-neutral-600 p-2 flex flex-col gap-10">
+      <h1 className="text-sarthi-text-secondary text-center mt-10">
         🌿 Our <span className="text-sarthi-green">Approach</span>
       </h1>
-      <p className="text-3xl">
+      <h4 className="text-center">
         At Sarthi Ayurvedic Hospital, every treatment begins with understanding
         your body type <span className="text-sarthi-green">(Prakriti)</span>,
         lifestyle, and health concerns. We combine traditional Ayurvedic wisdom
         with a modern approach to deliver long-lasting healing and balance.
-      </p>
+      </h4>
       <TreatmentSection
         heading={["🧘 Panchakarma", "Therapies"]}
         subHeading="The cornerstone of Ayurvedic healing."

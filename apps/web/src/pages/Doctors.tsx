@@ -2,11 +2,11 @@ import doctorImg from "@/assets/images/doctor.jpg";
 
 const Doctors = () => {
   return (
-    <section className="w-full h-full p-10 mb-10 text-neutral-600">
-      <h3 className="text-4xl text-center text-sarthi-text-secondary">
+    <section className="w-full flex flex-col gap-10 h-full p-2 text-neutral-600">
+      <h1 className="text-center text-sarthi-text-secondary mt-10">
         Meet Our <span className="text-sarthi-green">Expert Doctor</span>
-      </h3>
-      <section className="w-full h-full text-lg flex gap-20 mx-auto mt-10 max-w-5xl font-normal">
+      </h1>
+      <section className="w-full h-full flex-wrap flex gap-10">
         <img
           style={{
             borderTopLeftRadius: "50%",
@@ -16,25 +16,25 @@ const Doctors = () => {
           src={doctorImg}
           alt=""
         />
-        <section className="flex gap-5 flex-col">
+        <section className="flex gap-5 flex-col px-2">
           <section>
-            <h6 className="text-neutral-950 font-black">
+            <h2 className="text-neutral-950 font-black">
               Prof. Dr. Sanjeet Rana
-            </h6>
+            </h2>
             <p>BAMS, MD (Panchakarma)</p>
             <p>Director, Sarthi Ayurvedic Hospital</p>
             <p>Professor – Department of Panchakarma </p>
             <p>Ayurveda Physician | 15+ Years of Clinical Experience</p>
           </section>
-          <p>
+          <h4 className="text-justify">
             Prof. Dr. Sanjeet Rana is a distinguished Ayurvedic physician,
             academician, and clinical leader with over 15 years of experience in
             Panchakarma— the classical science of Ayurvedic detoxification and
             rejuvenation. Holding a Bachelor of Ayurvedic Medicine and Surgery
             (BAMS) and an MD in Panchakarma, he integrates ancient therapeutic
             wisdom with modern clinical practice.
-          </p>
-          <p>
+          </h4>
+          <h4 className="text-justify">
             As the Director of Sarthi Ayurvedic Hospital and Professor in the
             Department of Panchakarma, he has led efforts in advancing
             personalized Ayurvedic treatments, holistic wellness, and academic
@@ -42,7 +42,7 @@ const Doctors = () => {
             chronic lifestyle disorders, Ayurvedic diagnostics, and integrative
             healing. He is widely respected for his mentorship and contributions
             to Ayurvedic education and patient care.
-          </p>
+          </h4>
         </section>
       </section>
     </section>

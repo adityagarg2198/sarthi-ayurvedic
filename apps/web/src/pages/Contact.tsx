@@ -5,19 +5,19 @@ import { Mail, MapPinHouse, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="w-full h-full flex p-10 items-center flex-col gap-10 text-neutral-600">
-      <h3 className="text-5xl text-center text-sarthi-green">
+    <section className="w-full h-full flex p-2 items-center flex-col gap-15 text-neutral-600">
+      <h1 className="text-center text-sarthi-green mt-10">
         CONTACT <span className="text-sarthi-text-secondary">US</span>
-      </h3>
-      <h2 className="text-4xl text-center mt-10">
+      </h1>
+      <h2 className="text-center">
         Need Ayurvedic consultation or have a question?
         <blockquote>We’re here to guide you.</blockquote>
       </h2>
-      <section className="flex flex-col gap-5">
+      <section className="flex flex-col gap-3">
         <a
           target="_blank"
           href="https://wa.me/918481819393"
-          className="text-4xl flex gap-5"
+          className="flex gap-5 items-center"
         >
           <MessageCircle size={40} className="text-green-500" />
           +91‑8481819393
@@ -25,12 +25,12 @@ const Contact = () => {
         <a
           target="_blank"
           href="https://wa.me/918481819393"
-          className="text-4xl flex gap-5"
+          className="flex gap-5 items-center"
         >
           <Mail size={40} className="text-green-500" />
           sarthiayurvedichospital@gmail.com
         </a>
-        <address className="text-4xl flex gap-5">
+        <address className="flex gap-5 items-center">
           <MapPinHouse size={40} className="text-green-500" />
           <section>
             <p>Opposite to K.N. School,</p>
@@ -40,11 +40,11 @@ const Contact = () => {
           </section>
         </address>
       </section>
-      <h3 className="text-5xl text-center text-sarthi-green  w-full mt-10">
-        Visiting <span className="text-sarthi-text-secondary">Hours</span>
-      </h3>
-      <section className="flex flex-col text-lg gap-5 w-full max-w-2xl mt-5">
-        <section className="flex justify-between border-b-4 px-4 text-4xl">
+      <section className="flex flex-col gap-5 w-full max-w-2xl mt-5 px-2">
+        <h2 className="text-center text-sarthi-green  w-full">
+          Visiting <span className="text-sarthi-text-secondary">Hours</span>
+        </h2>
+        <section className="flex justify-between border-b-4 px-4">
           <p>Day</p>
           <p>Timings</p>
         </section>
@@ -57,14 +57,16 @@ const Contact = () => {
           <p>10:00 AM – 4:00 PM</p>
         </section>
       </section>
-      <section className="flex justify-between gap-40 mt-20">
-        <section className="text-4xl flex-1 max-w-2xl">
-          <h2 className="text-6xl text-center text-sarthi-green  w-full mt-10">
+      <section className="flex flex-wrap justify-between gap-10">
+        <section className="w-full max-w-2xl gap-2 flex flex-col">
+          <h3 className="text-center text-sarthi-green w-full mt-10">
             Still <span className="text-sarthi-text-secondary">Confused ?</span>
-          </h2>
-          <p>Leave your message and we'll get back to you within 24 hours.</p>
+          </h3>
+          <p className="text-center">
+            Leave your message and we'll get back to you within 24 hours.
+          </p>
         </section>
-        <form className="flex-1 flex flex-col gap-5 items-center">
+        <form className="flex flex-col gap-5 items-center px-2 w-full">
           <Field>
             <FieldLabel>Name</FieldLabel>
             <Input type="text" />
@@ -87,15 +89,16 @@ const Contact = () => {
           </Button>
         </form>
       </section>
-      <h2 className="text-5xl text-center text-sarthi-green w-full mt-10">
+      <h3 className="text-center text-sarthi-green">
         Locate <span className="text-sarthi-text-secondary">Us</span>
-      </h2>
+      </h3>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14011.870638271936!2d76.272767!3d28.600747!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39128552f8af05a7%3A0x2395de61ae5caafc!2sDr.sanjeet%20rana%20Ayurvedic%20panchkarma%20physician%20specialist%20M.D.Panchkarma!5e0!3m2!1sen!2sus!4v1762708605920!5m2!1sen!2sus"
-        width="600"
         height="450"
+        className="w-full max-w-96"
         style={{ border: 0 }}
         allowFullScreen={false}
+        title="Map"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>

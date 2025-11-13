@@ -10,7 +10,7 @@ import type { FC, ReactNode } from "react";
 const Slider: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <Carousel
-      className="mx-auto"
+      className="mx-auto hidden md:block"
       plugins={[
         Autoplay({
           delay: 4000,

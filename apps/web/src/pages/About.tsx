@@ -7,15 +7,13 @@ import massage from "@/assets/images/massage.png";
 
 const About = () => {
   return (
-    <section className="w-full h-full">
-      <section className="bg-sarthi-green w-full flex items-center text-center flex-col py-40 text-sarthi-text-secondary gap-6">
-        <p className="text-lg">Get to know about Sarthi Ayurvedic Hospital</p>
-        <h2 className="text-3xl max-w-lg">
-          <strong>
-            We are dedicated to restoring health through the wisdom of Ayurveda.
-          </strong>
-        </h2>
-        <p className="text-lg max-w-3xl">
+    <section className="w-full h-full text-neutral-600">
+      <section className="bg-sarthi-green w-full p-2 flex items-center text-center flex-col text-sarthi-text-secondary gap-6">
+        <h2 className="text-center mt-15">Get to know about Sarthi Ayurvedic Hospital</h2>
+        <h1 className="max-w-lg">
+          We are dedicated to restoring health through the wisdom of Ayurveda.
+        </h1>
+        <p className="max-w-3xl mb-10">
           For centuries, Ayurveda has been guiding people toward balance,
           vitality, and holistic well-being. At Sarthi Ayurvedic Hospital &
           Panchkarma Centre, we blend authentic Ayurvedic treatments with
@@ -38,11 +36,11 @@ const About = () => {
           ></div>
         </CarouselItem>
       </Slider>
-      <section className="w-full text-center flex flex-col gap-20 text-sarthi-text-secondary py-8 px-2">
-        <h1 className="text-5xl">
+      <section className="w-full text-center flex flex-col gap-10 text-sarthi-text-secondary p-2">
+        <h2 className="text-center mt-10">
           Our Healing <span className="text-sarthi-green">Impact</span>
-        </h1>
-        <section className="flex gap-4">
+        </h2>
+        <section className="flex flex-wrap items-center gap-4">
           <IconCard
             icon={<img src={massage} loading="lazy" />}
             text="Therapeutic Massage"
