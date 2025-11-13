@@ -14,11 +14,11 @@ const TreatmentCard: FC<{
 }> = ({ imageSrc, heading, subHeading }) => {
   return (
     <div className="bg-white text-sarthi-text-secondary items-center rounded-xl flex gap-10 w-fit p-5">
-      <img src={imageSrc} alt="" className="w-28 h-28" />
-      <div className="flex flex-col gap-3 justify-center items-center max-w-40">
-        <h4>{heading}</h4>
+      <img src={imageSrc} alt="" className="w-24 h-24" />
+      <div className="flex flex-col gap-4 justify-center items-center max-w-48">
+        <h4 className="text-center">{heading}</h4>
         <p className="text-center">{subHeading}</p>
-        <Button className="cursor-pointer bg-sarthi-text-secondary text-white font-semibold text-base">
+        <Button className="cursor-pointer bg-sarthi-text-secondary text-white font-semibold">
           Visit
         </Button>
       </div>
@@ -28,17 +28,17 @@ const TreatmentCard: FC<{
 
 const Home = () => {
   return (
-    <section className="w-full h-full flex flex-col gap-10 text-neutral-600">
+    <section className="w-full h-full flex flex-col gap-10 md:gap-15 text-neutral-600">
       <section className="bg-sarthi-green w-full flex items-center flex-col py-10 text-neutral-900 gap-10">
         <p>YOUR JOURNEY TO WELLNESS BEGINS HERE</p>
-        <h1 className="font-semibold text-center max-w-96">
+        <h1 className="font-semibold text-center max-w-3xl">
           Trusted Ayurvedic care for a healthier & happier life.
         </h1>
         <div className="flex items-center gap-5">
           <figure>
             <img
               src={nabh}
-              className="aspect-square object-contain w-12 md:24"
+              className="aspect-square object-contain w-12 md:w-24"
               alt="Nabh Logo"
             />
           </figure>
@@ -62,7 +62,7 @@ const Home = () => {
         <p className="text-sarthi-text-secondary text-center">
           Listen to heartfelt stories from those who’ve healed with us.
         </p>
-        <section className="flex items-center justify-center gap-10 flex-wrap">
+        <section className="flex w-full items-center justify-center gap-10 flex-wrap">
           <iframe
             className="max-w-96 w-full"
             height="500"
@@ -91,8 +91,8 @@ const Home = () => {
       </section>
       <section className="flex flex-col gap-5 p-2">
         <h2 className="text-sarthi-green text-center">ABOUT</h2>
-        <section className="flex flex-row gap-5 px-10">
-          <section className="flex flex-1 flex-col gap-2 items-start">
+        <section className="flex flex-row gap-5 px-10 md:p-0 justify-end">
+          <section className="flex flex-1 flex-col gap-2 items-start max-w-md">
             <h4 className="font-bold text-sarthi-text-secondary">
               OUR LEGACY <span className="text-sarthi-green">OF HEALING</span>
             </h4>
@@ -113,7 +113,7 @@ const Home = () => {
             </Button>
           </section>
           <section
-            className="hidden md:block flex-1 h-[500px]"
+            className="hidden md:block flex-1 h-[500px] max-w-[750px]"
             style={{
               backgroundImage: `url(${doctors})`,
               backgroundRepeat: "no-repeat",
@@ -165,9 +165,7 @@ const Home = () => {
         </section>
       </section>
       <section className="bg-sarthi-green rounded-tl-4xl p-2 py-20 gap-10 flex flex-col items-center rounded-tr-4xl text-sarthi-text-secondary">
-        <h2 className="text-center">
-          HOLISTIC TREATMENTS FOR COMPLETE CARE
-        </h2>
+        <h2 className="text-center">HOLISTIC TREATMENTS FOR COMPLETE CARE</h2>
         <p className="text-center">
           We offer a wide range of Ayurvedic therapies designed to restore
           balance, promote healing, and rejuvenate your body.
