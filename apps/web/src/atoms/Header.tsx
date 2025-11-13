@@ -85,7 +85,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <NavigationMenu className="px-8 py-4 w-full gap-10 fixed bg-white shadow-md shadow-black/20">
+    <NavigationMenu className="px-8 py-4 w-full md:gap-10 fixed bg-white shadow-md shadow-black/20">
       <Logo />
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild className="ml-auto">
