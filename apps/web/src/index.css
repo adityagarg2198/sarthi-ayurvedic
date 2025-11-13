@@ -18,3 +18,46 @@
 body {
   font-family: "Visuelt Pro", sans-serif;
 }
+
+@media (min-width: 320px) {
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-lg;
+  }
+  h5 {
+    @apply text-sm;
+  }
+  h6 {
+    @apply text-xs;
+  }
+  p {
+    @apply text-base;
+  }
+  .container {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  /* md: 768px and up */
+  /* Custom styles here for medium screens and up */
+}
+
+@media (min-width: 1024px) {
+  /* lg: 1024px and up */
+  /* Custom styles here for large screens and up */
+}
+
+@media (min-width: 1280px) {
+  /* xl: 1280px and up */
+  /* Custom styles here for extra large screens and up */
+}

@@ -9,8 +9,8 @@ const FooterItem: FC<{ heading: string; children: ReactNode }> = ({
 }) => {
   return (
     <div className="flex flex-col gap-1 w-full">
-      <h4 className="text-2xl font-semibold">{heading}:</h4>
-      <div className="text-lg text-neutral-600">{children}</div>
+      <h3 className="font-semibold">{heading}:</h3>
+      <div className="text-neutral-600">{children}</div>
     </div>
   );
 };
@@ -116,9 +116,9 @@ const Footer = () => {
       </section>
       <section className="flex justify-center flex-col gap-2 items-center w-full">
         <Logo className="text-5xl" isLarge />
-        <h6 className="mt-5">
+        <h5 className="mt-5">
           © 2025 Sarthi Ayurvedic Hospital. All rights reserved.
-        </h6>
+        </h5>
         <a href="https://pragyan.framer.website/" target="_blank">
           Proudly designed by Pragyan Design Co.
         </a>

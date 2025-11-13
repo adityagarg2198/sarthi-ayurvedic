@@ -12,12 +12,11 @@ const Marquee: FC<{ content: string[] }> = ({ content }) => {
         }}
       >
         {items.map((item, i) => (
-          <p key={`${item}-${i}`} className="inline-block">
+          <h3 key={`${item}-${i}`} className="inline-block">
             ● {item}
-          </p>
+          </h3>
         ))}
       </div>
-
       <style>
         {`
             @keyframes marqueeScroll {
