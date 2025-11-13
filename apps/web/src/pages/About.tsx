@@ -4,6 +4,8 @@ import slide1 from "@/assets/images/slide1.webp";
 import slide2 from "@/assets/images/slide2.webp";
 import IconCard from "@/atoms/IconCard";
 import massage from "@/assets/images/massage.png";
+import herbal from "@/assets/images/herbal.webp";
+import meditation from '@/assets/images/meditation.webp'
 
 const About = () => {
   return (
@@ -46,11 +48,11 @@ const About = () => {
             text="Therapeutic Massage"
           />
           <IconCard
-            icon={<img src={massage} loading="lazy" />}
+            icon={<img src={herbal} loading="lazy" />}
             text="Herbal Remedies"
           />
           <IconCard
-            icon={<img src={massage} loading="lazy" />}
+            icon={<img src={meditation} loading="lazy" />}
             text="Meditation & Wellness"
           />
         </section>

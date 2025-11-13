@@ -5,7 +5,12 @@ import doctor from "@/assets/images/doctor.jpg";
 import Stat from "@/atoms/Stat";
 import { Button } from "@/components/ui/button";
 import massage from "@/assets/images/massage.png";
+import relax from "@/assets/images/relax.webp";
+import remedy from "@/assets/images/remedy.webp";
+import heal from "@/assets/images/heal.webp";
+import yoga from "@/assets/images/yoga.webp";
 import type { FC } from "react";
+import { Link } from "react-router-dom";
 
 const TreatmentCard: FC<{
   imageSrc: string;
@@ -14,7 +19,11 @@ const TreatmentCard: FC<{
 }> = ({ imageSrc, heading, subHeading }) => {
   return (
     <div className="bg-white text-sarthi-text-secondary items-center rounded-xl flex gap-10 w-fit p-5">
-      <img src={imageSrc} alt="" className="w-24 h-24" />
+      <img
+        src={imageSrc}
+        alt=""
+        className="w-24 h-24 text-sarthi-green fill-amber-700"
+      />
       <div className="flex flex-col gap-4 justify-center items-center max-w-48">
         <h4 className="text-center">{heading}</h4>
         <p className="text-center">{subHeading}</p>
@@ -91,7 +100,7 @@ const Home = () => {
       </section>
       <section className="flex flex-col gap-5 p-2">
         <h2 className="text-sarthi-green text-center">ABOUT</h2>
-        <section className="flex flex-row gap-5 px-10 md:p-0 justify-end">
+        <section className="flex flex-row gap-5 px-5 md:p-0 justify-end">
           <section className="flex flex-1 flex-col gap-2 items-start max-w-md">
             <h4 className="font-bold text-sarthi-text-secondary">
               OUR LEGACY <span className="text-sarthi-green">OF HEALING</span>
@@ -108,8 +117,8 @@ const Home = () => {
             <p>Rooted in Tradition</p>
             <p>Focused on Affordability</p>
             <p>Dedicated to Community Wellness</p>
-            <Button className="cursor-pointer bg-sarthi-green text-white font-semibold text-base">
-              Know more
+            <Button className="cursor-pointer bg-sarthi-green text-white font-semibold">
+              <Link to="/about">Know more</Link>
             </Button>
           </section>
           <section
@@ -171,7 +180,7 @@ const Home = () => {
           balance, promote healing, and rejuvenate your body.
         </p>
         <Button className="cursor-pointer bg-sarthi-text-secondary text-white font-semibold text-base">
-          Browse All Treatments
+          <Link to="/treatments">Browse All Treatments</Link>
         </Button>
         <section className="flex gap-10 flex-wrap justify-center">
           <TreatmentCard
@@ -180,22 +189,22 @@ const Home = () => {
             subHeading="A holistic detox therapy to restore balance and vitality."
           />
           <TreatmentCard
-            imageSrc={massage}
+            imageSrc={relax}
             heading="AYURVEDIC MASSAGE"
             subHeading="Relaxing massage with herbal oils for deep healing."
           />
           <TreatmentCard
-            imageSrc={massage}
+            imageSrc={remedy}
             heading="HERBAL MEDICATION"
             subHeading="Natural remedies prepared from authentic herbs."
           />
           <TreatmentCard
-            imageSrc={massage}
+            imageSrc={heal}
             heading="DETOXIFICATION"
             subHeading="Flush out toxins and restore your body’s natural balance."
           />
           <TreatmentCard
-            imageSrc={massage}
+            imageSrc={yoga}
             heading="YOGA & MEDITATION"
             subHeading="Ancient practices for inner peace and physical health"
           />
