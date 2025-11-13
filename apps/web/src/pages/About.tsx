@@ -10,7 +10,7 @@ const About = () => {
     <section className="w-full h-full text-neutral-600">
       <section className="bg-sarthi-green w-full p-2 flex items-center text-center flex-col text-sarthi-text-secondary gap-6">
         <h2 className="text-center mt-15">Get to know about Sarthi Ayurvedic Hospital</h2>
-        <h1 className="max-w-lg">
+        <h1 className="max-w-2xl">
           We are dedicated to restoring health through the wisdom of Ayurveda.
         </h1>
         <p className="max-w-3xl mb-10">
@@ -40,7 +40,7 @@ const About = () => {
         <h2 className="text-center mt-10">
           Our Healing <span className="text-sarthi-green">Impact</span>
         </h2>
-        <section className="flex flex-wrap items-center gap-4">
+        <section className="flex flex-wrap items-center justify-center gap-4">
           <IconCard
             icon={<img src={massage} loading="lazy" />}
             text="Therapeutic Massage"

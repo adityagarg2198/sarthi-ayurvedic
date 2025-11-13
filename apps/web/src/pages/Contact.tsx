@@ -41,7 +41,7 @@ const Contact = () => {
         </address>
       </section>
       <section className="flex flex-col gap-5 w-full max-w-2xl mt-5 px-2">
-        <h2 className="text-center text-sarthi-green  w-full">
+        <h2 className="text-center text-sarthi-green w-full">
           Visiting <span className="text-sarthi-text-secondary">Hours</span>
         </h2>
         <section className="flex justify-between border-b-4 px-4">
@@ -57,16 +57,16 @@ const Contact = () => {
           <p>10:00 AM – 4:00 PM</p>
         </section>
       </section>
-      <section className="flex flex-wrap justify-between gap-10">
+      <section className="flex w-full flex-wrap gap-10 justify-center">
         <section className="w-full max-w-2xl gap-2 flex flex-col">
-          <h3 className="text-center text-sarthi-green w-full mt-10">
+          <h2 className="text-center text-sarthi-green w-full mt-10">
             Still <span className="text-sarthi-text-secondary">Confused ?</span>
-          </h3>
+          </h2>
           <p className="text-center">
             Leave your message and we'll get back to you within 24 hours.
           </p>
         </section>
-        <form className="flex flex-col gap-5 items-center px-2 w-full">
+        <form className="flex flex-col gap-5 items-center px-2 w-full max-w-lg">
           <Field>
             <FieldLabel>Name</FieldLabel>
             <Input type="text" />

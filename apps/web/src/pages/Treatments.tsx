@@ -18,7 +18,7 @@ const TreatmentSection: FC<{
   };
 
   return (
-    <Card className="flex flex-col w-full max-w-3xl gap-5 p-2">
+    <Card className="flex flex-col w-full max-w-3xl md:max-w-5xl gap-5 p-2 md:p-10">
       <h2 className="text-sarthi-text-secondary text-center">
         {heading[0]} <span className="text-sarthi-green">{heading[1]}</span>
       </h2>
@@ -30,7 +30,7 @@ const TreatmentSection: FC<{
 
 const Treatments = () => {
   return (
-    <section className="w-full h-full text-neutral-600 p-2 flex flex-col gap-10">
+    <section className="w-full h-full text-neutral-600 p-2 items-center flex flex-col gap-10">
       <h1 className="text-sarthi-text-secondary text-center mt-10">
         🌿 Our <span className="text-sarthi-green">Approach</span>
       </h1>
