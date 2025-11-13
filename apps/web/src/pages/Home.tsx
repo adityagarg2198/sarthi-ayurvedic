@@ -13,11 +13,11 @@ const TreatmentCard: FC<{
   subHeading: string;
 }> = ({ imageSrc, heading, subHeading }) => {
   return (
-    <div className="bg-white rounded-xl h-fit w-fit">
-      <img src={imageSrc} alt="" />
-      <div>
-        <h6>{heading}</h6>
-        <p>{subHeading}</p>
+    <div className="bg-white text-sarthi-text-secondary items-center rounded-xl flex gap-10 w-fit p-5">
+      <img src={imageSrc} alt="" className="w-28 h-28" />
+      <div className="flex flex-col gap-3 justify-center items-center max-w-40">
+        <h6 className="text-xl">{heading}</h6>
+        <p className="text-center">{subHeading}</p>
         <Button className="cursor-pointer bg-sarthi-text-secondary text-white font-semibold text-base">
           Visit
         </Button>
@@ -166,7 +166,7 @@ const Home = () => {
           </section>
         </section>
       </section>
-      <section className="bg-sarthi-green rounded-tl-2xl rounded-tr-2xl text-sarthi-text-secondary">
+      <section className="bg-sarthi-green rounded-tl-4xl p-10 gap-10 flex flex-col items-center rounded-tr-4xl text-sarthi-text-secondary">
         <h2 className="text-4xl text-center">
           HOLISTIC TREATMENTS FOR COMPLETE CARE
         </h2>
@@ -177,7 +177,7 @@ const Home = () => {
         <Button className="cursor-pointer bg-sarthi-text-secondary text-white font-semibold text-base">
           Browse All Treatments
         </Button>
-        <section>
+        <section className="flex gap-10 flex-wrap justify-center">
           <TreatmentCard
             imageSrc={massage}
             heading="PANCHAKARMA THERAPY"
